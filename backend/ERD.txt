@@ -1,0 +1,77 @@
+Identify the entities: Determine the main entities in your system. 
+An entity is a person, place, thing, or concept that you want to store information about. 
+For example, in a school database, the entities might include students, teachers, courses, and classrooms.
+Entities:
+User
+Tweet
+Hashtag
+Mention
+Retweet
+Like
+Follow
+
+Determine the relationships: Identify the relationships between the entities. 
+Relationships describe how the entities are related to each other. 
+For example, a student might be enrolled in multiple courses, or a teacher might teach multiple courses.
+Relationships: 
+User can create many tweets (one-to-many)
+Tweet can have many hashtags (many-to-many)
+Tweet can mention many users (many-to-many)
+Tweet can be retweeted by many users (many-to-many)
+Tweet can be liked by many users (many-to-many)
+User can follow many other users (many-to-many)
+
+
+Define the attributes: For each entity, determine the attributes that you want to store. 
+Attributes are the properties or characteristics of the entity. 
+For example, a student entity might have attributes such as name, student ID, and date of birth.
+User:
+user_id (PK)
+username
+email
+password
+bio
+location
+website
+created_at
+updated_at
+
+Tweet:
+tweet_id (PK)
+user_id (FK)
+content
+created_at
+updated_at
+Hashtag:
+hashtag_id (PK)
+hashtag_name
+created_at
+
+Mention:
+mention_id (PK)
+user_id (FK)
+tweet_id (FK)
+created_at
+Retweet:
+retweet_id (PK)
+user_id (FK)
+tweet_id (FK)
+created_at
+
+Like:
+like_id (PK)
+user_id (FK)
+tweet_id (FK)
+created_at
+Follow:
+follow_id (PK)
+user_id (FK)
+follower_user_id (FK)
+created_at
+
+
+Create the diagram: Once you have identified the entities, relationships, and attributes, you can create the ERD. 
+There are many tools you can use to create an ERD, including software such as Lucidchart or draw.io, or you can draw it by hand.
+
+Refine the diagram: Once you have created the ERD, review it to make sure it accurately represents your system. 
+You may need to make adjustments to the diagram to ensure it is clear and easy to understand.
