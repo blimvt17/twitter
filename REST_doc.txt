@@ -1,0 +1,73 @@
+User API:
+
+Path: /users
+Description: Get a list of all users
+Parameters: None
+
+Path: /users/{user_id}
+Description: Get a user by their ID
+Parameters: user_id: The unique identifier of the user (required)
+
+Path: /users/{username}
+Description: Get a user by their username
+Parameters: username: The unique username of the user (required)
+
+Path: /users/{user_id}/tweets
+Description: Get a list of tweets posted by a specific user
+Parameters: 
+user_id: The unique identifier of the user (required)
+count: The number of tweets to return (optional, default 20)
+max_id: The maximum ID of the tweet to return (optional)
+since_id: The minimum ID of the tweet to return (optional)
+
+Tweet API:
+Path: /tweets
+Description: Get a list of all tweets
+Parameters: None
+
+Path: /tweets/{tweet_id}
+Description: Get a tweet by its ID
+Parameters:
+tweet_id: The unique identifier of the tweet (required)
+
+Path: /tweets/{tweet_id}/likes
+Description: Get a list of users who liked a specific tweet
+Parameters:
+tweet_id: The unique identifier of the tweet (required)
+count: The number of likes to return (optional, default 20)
+cursor: The pagination cursor (optional)
+
+Path: /tweets/{tweet_id}/retweets
+Description: Get a list of users who retweeted a specific tweet
+Parameters:
+tweet_id: The unique identifier of the tweet (required)
+count: The number of retweets to return (optional, default 20)
+cursor: The pagination cursor (optional)
+
+Path: /tweets/search
+Description: Search for tweets matching a specific query
+Parameters:
+q: The query string (required)
+count: The number of tweets to return (optional, default 20)
+max_id: The maximum ID of the tweet to return (optional)
+since_id: The minimum ID of the tweet to return (optional)
+
+Hashtag API:
+
+Path: /hashtags/{hashtag_name}/tweets
+Description: Get a list of tweets containing a specific hashtag
+Parameters:
+hashtag_name: The name of the hashtag (required)
+count: The number of tweets to return (optional, default 20)
+max_id: The maximum ID of the tweet to return (optional)
+since_id: The minimum ID of the tweet to return (optional)
+
+Search API:
+
+Path: /search
+Description: Search for users, tweets, and hashtags matching a specific query
+Parameters:
+q: The query string (required)
+count: The number of results to return (optional, default 20)
+result_type: The type of search results to return (optional, default mixed)
+Possible values: mixed, recent, popular

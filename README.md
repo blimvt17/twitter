@@ -14,7 +14,12 @@ Notes:
 - [x] create a new folder, spin up a new spring boot service using https://start.spring.io/ and add it there - maven, java 17
 - [x] create an ERD - assume we're using SQL, come up with tables with columns. just write in text file
 - [ ] decide which db we're going to use and document why - explore what kind of SQL dbs are there
-- [ ] create and document REST API paths and params
+- Twitter uses MySQL to store relational data such as user info, user profile data, relationships b/w follower/follows, hashtags, time created
+- They use NoSQL (HBase/Cassandra) to store and serve tweet data and real time analytics and monitoring
+  - because tweet data is unstructured and NoSQL will allow twitter to handle large volume, velocity and allow flexibility to handle ds and schemas changes over time
+- use both to their strengths and needs
+
+- [x] create and document REST API paths and params
 - [ ] watch controller - ser
 - [ ] implement each endpoint with mock data
 - [ ] write unit tests
